@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biscoito da Sorte Personalizado</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Caveat:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <div class="stars"></div>
+
+    <div class="container">
+
+        
+
+        <!-- CABEÇALHO -->
+
+        <header>
+
+            <h1>✨ Biscoito da Sorte ✨</h1>
+
+            <p>Conecte-se com sua energia e receba a mensagem certa para o seu momento.</p>
+
+        </header>
+
+
+
+        <!-- ETAPA 1: FORMULÁRIO FULLSCREEN -->
+
+        <section id="step-form" class="card">
+
+            <h2>Personalize sua Revelação</h2>
+
+            
+
+            <div class="input-group">
+
+                <label for="user-name">Seu Nome (opcional):</label>
+
+                <input type="text" id="user-name" placeholder="Ex: Maria">
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label>Em qual área da vida você precisa de orientação hoje?</label>
+
+                <div class="chips-container">
+
+                    <label class="chip">
+
+                        <input type="checkbox" name="category" value="carreira">
+
+                        <span>💼 Carreira & Finanças</span>
+
+                    </label>
+
+                    <label class="chip">
+
+                        <input type="checkbox" name="category" value="amor">
+
+                        <span>❤️ Amor & Relacionamentos</span>
+
+                    </label>
+
+                    <label class="chip">
+
+                        <input type="checkbox" name="category" value="crescimento">
+
+                        <span>🌱 Crescimento Pessoal</span>
+
+                    </label>
+
+                    <label class="chip">
+
+                        <input type="checkbox" name="category" value="saude">
+
+                        <span>🧠 Paz & Saúde Mental</span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <button id="btn-prepare" class="btn-primary">Criar Meu Biscoito da Sorte</button>
+
+        </section>
+
+
+
+        <!-- ETAPA 2: PALCO 3D FULLSCREEN -->
+
+        <section id="step-cookie" class="card hidden stage-card">
+
+            <p id="instruction-text" class="pulse-text">👇 Clique no biscoito para quebrá-lo 👇</p>
+
+            
+
+            <div class="cookie-stage">
+
+                <div class="cookie-wrapper" id="cookie-btn">
+
+                    
+
+                    <!-- Papelzinho saindo do centro -->
+
+                    <div class="paper-strip">SORTE</div>
+
+
+
+                    <!-- Lado Esquerdo do Biscoito 3D -->
+
+                    <div class="cookie-part cookie-left">
+
+                        <svg viewBox="0 0 150 200" class="cookie-svg">
+
+                            <defs>
+
+                                <linearGradient id="grad-left" x1="0%" y1="0%" x2="100%" y2="100%">
+
+                                    <stop offset="0%" stop-color="#fef08a" />
+
+                                    <stop offset="50%" stop-color="#f59e0b" />
+
+                                    <stop offset="100%" stop-color="#92400e" />
+
+                                </linearGradient>
+
+                                <filter id="shadow-3d">
+
+                                    <feDropShadow dx="-4" dy="6" stdDeviation="4" flood-opacity="0.4"/>
+
+                                </filter>
+
+                            </defs>
+
+                            <path d="M 145 20 C 90 10, 20 40, 10 100 C 2 150, 50 185, 120 170 C 135 150, 140 100, 145 20 Z" fill="url(#grad-left)" filter="url(#shadow-3d)" />
+
+                            <path d="M 145 20 C 110 70, 100 120, 120 170" stroke="#78350f" stroke-width="4" fill="none" opacity="0.6"/>
+
+                            <path d="M 140 25 C 95 20, 30 45, 20 95" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.4"/>
+
+                        </svg>
+
+                    </div>
+
+
+
+                    <!-- Lado Direito do Biscoito 3D -->
+
+                    <div class="cookie-part cookie-right">
+
+                        <svg viewBox="0 0 150 200" class="cookie-svg">
+
+                            <defs>
+
+                                <linearGradient id="grad-right" x1="100%" y1="0%" x2="0%" y2="100%">
+
+                                    <stop offset="0%" stop-color="#fef08a" />
+
+                                    <stop offset="50%" stop-color="#d97706" />
+
+                                    <stop offset="100%" stop-color="#78350f" />
+
+                                </linearGradient>
+
+                            </defs>
+
+                            <path d="M 5 20 C 60 10, 130 40, 140 100 C 148 150, 100 185, 30 170 C 15 150, 10 100, 5 20 Z" fill="url(#grad-right)" filter="url(#shadow-3d)" />
+
+                            <path d="M 5 20 C 40 70, 50 120, 30 170" stroke="#451a03" stroke-width="4" fill="none" opacity="0.6"/>
+
+                            <path d="M 10 25 C 55 20, 120 45, 130 95" stroke="#ffffff" stroke-width="3" fill="none" opacity="0.3"/>
+
+                        </svg>
+
+                    </div>
+
+
+
+                    <!-- Sombra no Chão -->
+
+                    <div class="floor-shadow"></div>
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ETAPA 3: RESULTADO FULLSCREEN -->
+
+        <section id="step-result" class="result-section hidden">
+
+            <div class="fortune-paper">
+
+                <div class="paper-decoration">★ ★ ★</div>
+
+                <h3 id="result-greeting">Sua Mensagem:</h3>
+
+                <p id="result-message" class="quote">"..."</p>
+
+                
+
+                <div class="lucky-numbers-container">
+
+                    <span>Seus números da sorte:</span>
+
+                    <div id="lucky-numbers" class="numbers-box"></div>
+
+                </div>
+
+
+
+                <button id="btn-restart" class="btn-secondary">Abrir Outro Biscoito 🥠</button>
+
+            </div>
+
+        </section>
+
+
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html> 
